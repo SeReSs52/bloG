@@ -1,9 +1,22 @@
+
+body{
+    background-image: url('/static/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 110vh;
+}
 .blog_wrap{
     border: 2px solid #ff8900;
     margin-bottom: 2em;
     padding: 7px;
     border-radius: 10px;
-}h3, h5{
+    background-color: blanchedalmond;
+}
+.detail_wrap{
+    background-color: white;
+}
+h3, h5{
     font-family: 'Balsamiq Sans';
 }
 p{
