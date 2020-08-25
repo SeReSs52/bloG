@@ -4,7 +4,8 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 110vh;
+    min-height: 101vh;
+
 }
 .blog_wrap{
     border: 2px solid #ff8900;
