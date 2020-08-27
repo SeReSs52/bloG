@@ -15,7 +15,7 @@ class Post(models.Model):
     """  """
     STATUC_CHOICES = (('draft', 'Draft'), ('published', 'Published'))
     title = models.CharField(max_length=250) # строка длиной максимум 20 символов
-    post_img = models.ImageField(upload_to='images/', default='')
+    post_img = models.ImageField(upload_to='images/', default='', required = False)
     slug = models.SlugField(max_length=250, unique_for_date='publish') #короткое url имя
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
     body = models.TextField() #основной контент
