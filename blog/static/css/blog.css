@@ -4,7 +4,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    min-height: 101vh;
+    height: 103vh;
 
 }
 .blog_wrap{
@@ -12,10 +12,14 @@ body{
     margin-bottom: 2em;
     padding: 7px;
     border-radius: 10px;
-    background-color: blanchedalmond;
+    background-color: #7fffa7;
 }
 .detail_wrap{
-    background-color: white;
+    background-color: #a4ffa4;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 h3, h5{
     font-family: 'Balsamiq Sans';
@@ -26,6 +30,7 @@ p{
 .promo_img{
     width: 200px;
     border: 2px solid #ff0000;
+    background-color: #332222;
 }
 h5, p{
 word-wrap: break-word;
