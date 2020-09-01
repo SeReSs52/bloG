@@ -7,7 +7,9 @@
 {% for post in posts %}
 <div class="blog_wrap">
     <h5 class="is-size-3 has-text-centered"> {{ post.title|truncatewords:15|linebreaks }} </h5>
+    {% if post.post_img %}
     <img src="{{ post.post_img.url }}" alt="" class="promo_img">
+    {% endif %}
     <p class="blog_body"> {{ post.body|truncatewords:30|linebreaks }}</p>
     <p class="blog_time"> Опубликовано {{ post.publish }}</p>
     <a href="{{ post.get_absolute_url }}"> Продолжить чтение </a>
