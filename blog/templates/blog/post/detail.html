@@ -9,4 +9,9 @@
 <img src="{{ post.post_img.url }}" alt="" class="promo_img">
 <p class="blog_time"> Опубликовано  {{ post.publish }} by {{ post.author }}</p>
     </div>
+    {% with comments.count as total_comments %}
+        <h2>
+            {{ total_comments }} comment {{ total_comments|pluralize }}
+        </h2>
+    {% endwith %}
 {% endblock %}
