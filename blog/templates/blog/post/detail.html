@@ -14,4 +14,24 @@
             {{ total_comments }} comment {{ total_comments|pluralize }}
         </h2>
     {% endwith %}
+    {% for comment in comments %}
+<div class="comment"><div class="info">
+    Comment {{ forloop.counter }} by {{comment.name }}
+    {{ comment.created }}
+</div>
+{{ comment.body|linebreaks }}
+</div>
+    {% empty %}
+<p>Еще никто не прокоментировал!</p>>
+{% endfor %}
+{% if new_comment %}
+{% else %}
+    <h3>Ваш комментарий был отправлен</h3>
+    <form method="post">
+        {{ comment_form.as_p }}
+        {% csrf_token %}
+        <p><input type="submit" value="Добавить коммент"></p>
+
+
+{% endif %}
 {% endblock %}
